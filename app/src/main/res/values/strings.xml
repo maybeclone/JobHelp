@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Job Help</string>
+    <string name="app_name" translatable="false">Job Help</string>
+    <string name="name_button_multiple_choice_question">John Holland Test</string>
 </resources>
