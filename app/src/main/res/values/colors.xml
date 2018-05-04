@@ -5,4 +5,5 @@
     <color name="colorAccent">#FF4081</color>
     <color name="colorStepViewForeground">#FFE04E41</color>
     <color name="colorStepViewBackground">#FFF9E7CF</color>
+    <color name="colorBackgroundDivider">#FFE0E0E0</color>
 </resources>

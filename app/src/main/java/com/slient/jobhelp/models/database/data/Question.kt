@@ -9,10 +9,14 @@ import android.arch.persistence.room.*
         parentColumns = arrayOf("id"),
         childColumns = arrayOf("group-id"),
         onDelete = ForeignKey.CASCADE)))
+
 data class Question(@ColumnInfo(name = "question") val question: String,
                     @ColumnInfo(name = "group-id") val groupId: String){
 
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id") var id: Long = 0
+
+    @Ignore
+    var point = -1
 
 }

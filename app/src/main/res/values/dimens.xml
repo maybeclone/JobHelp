@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="item_question_margin_top_bottom">5dp</dimen>
+    <dimen name="item_question_margin_left_right">10dp</dimen>
+    <dimen name="item_question_space_between_component">8dp</dimen>
+    <dimen name="item_question_space_between_radio_button">5dp</dimen>
+
+    <dimen name="button_continue_margin_left_right">10dp</dimen>
+    <dimen name="button_continue_margin_bottom">5dp</dimen>
+    <dimen name="button_continue_padding">5dp</dimen>
+</resources>

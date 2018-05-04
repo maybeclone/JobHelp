@@ -1,4 +1,16 @@
 <resources>
     <string name="app_name" translatable="false">Job Help</string>
     <string name="name_button_multiple_choice_question">John Holland Test</string>
+    <string name="title_radio_button_zero_point">0 pt</string>
+    <string name="title_radio_button_one_point">1 pt</string>
+    <string name="title_radio_button_two_point">2 pt</string>
+    <string name="title_radio_button_three_point">3 pt</string>
+    <string name="title_radio_button_four_point">4 pt</string>
+
+    <string name="label_table_group">Table</string>
+
+    <string name="title_button_next_group_question">Continue</string>
+
+    <string name="title_button_continue_show_result">Show result</string>
+
 </resources>

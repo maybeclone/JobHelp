@@ -3,7 +3,7 @@ package com.slient.jobhelp.preferences;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.slient.jobhelp.models.database.configs.ConfigPreference;
+import com.slient.jobhelp.configs.ConfigPreference;
 
 /**
  * Created by silent on 5/3/2018.
@@ -25,15 +25,13 @@ public class AccessConfigPreference {
     }
 
     public boolean firstLauncher(){
-        boolean firstLauncher = sharedPreferences.getBoolean(ConfigPreference.FRIST_LAUNCHER,false);
+        boolean firstLauncher = sharedPreferences.getBoolean(ConfigPreference.FIRST_LAUNCHER,false);
         if(!firstLauncher){
             SharedPreferences.Editor editor = sharedPreferences.edit();
-            editor.putBoolean(ConfigPreference.FRIST_LAUNCHER, true);
+            editor.putBoolean(ConfigPreference.FIRST_LAUNCHER, true);
             editor.apply();
             return true;
         }
         return false;
     }
-
-
 }

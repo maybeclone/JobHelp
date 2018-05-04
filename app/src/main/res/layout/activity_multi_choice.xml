@@ -5,18 +5,44 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".activities.MultipleChoiceQuestionActivity"
-    android:orientation="horizontal">
+    android:orientation="vertical">
 
     <com.anton46.stepsview.StepsView
         android:id="@+id/progressGroupStepView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/questionsRecyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+   <FrameLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_weight="1">
+       <android.support.v7.widget.RecyclerView
+           android:id="@+id/questionsRecyclerView"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_weight="1"
+           app:layoutManager="android.support.v7.widget.LinearLayoutManager">
 
-    </android.support.v7.widget.RecyclerView>
+       </android.support.v7.widget.RecyclerView>
+       <ProgressBar
+           android:id="@+id/loadingFromDBProgressBar"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:layout_marginLeft="10dp"
+           android:layout_marginRight="10dp"
+           style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"/>
+   </FrameLayout>
+
+    <Button
+        android:id="@+id/continueButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title_button_next_group_question"
+        android:enabled="false"
+        android:layout_marginLeft="@dimen/button_continue_margin_left_right"
+        android:layout_marginRight="@dimen/button_continue_margin_left_right"
+        android:layout_marginBottom="@dimen/button_continue_margin_bottom"
+        android:padding="@dimen/button_continue_padding"/>
 
 </LinearLayout>

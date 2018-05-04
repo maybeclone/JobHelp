@@ -13,7 +13,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), View.OnClickListener{
 
-    var databaseHelper: AppDatabase? = null
+    var databaseAccess: AppDatabase? = null
     lateinit var accessConfigPreference: AccessConfigPreference
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,12 +26,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener{
     }
 
     private fun init(){
-        databaseHelper = AppDatabase.getInstance(this)
+        databaseAccess = AppDatabase.getInstance(this)
         accessConfigPreference = AccessConfigPreference.getInstance(this)
 
         if(accessConfigPreference.firstLauncher()){
-            databaseHelper?.groupQuestionDAO()?.insert(DatabaseUtil.getAllGroupQuestion())
-            databaseHelper?.questionDAO()?.insert(DatabaseUtil.getAllQuestions())
+            databaseAccess?.groupQuestionDAO()?.insert(DatabaseUtil.getAllGroupQuestion())
+            databaseAccess?.questionDAO()?.insert(DatabaseUtil.getAllQuestions())
         }
     }
 

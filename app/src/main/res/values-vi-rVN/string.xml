@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="name_button_multiple_choice_question">Trắc nghiệm John Holland</string>
+
+    <string name="title_radio_button_zero_point">0 đ</string>
+    <string name="title_radio_button_one_point">1 đ</string>
+    <string name="title_radio_button_two_point">2 đ</string>
+    <string name="title_radio_button_three_point">3 đ</string>
+    <string name="title_radio_button_four_point">4 đ</string>
+
+    <string name="label_table_group">Bảng</string>
+
+    <string name="title_button_next_group_question">Tiếp tục</string>
+    <string name="title_button_continue_show_result">Xem kết quả</string>
 </resources>
