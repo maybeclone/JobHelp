@@ -8,4 +8,21 @@
     <dimen name="button_continue_margin_left_right">10dp</dimen>
     <dimen name="button_continue_margin_bottom">5dp</dimen>
     <dimen name="button_continue_padding">5dp</dimen>
+
+    <dimen name="item_group_description_image_margin_top">8dp</dimen>
+    <dimen name="item_group_margin_left_right">25dp</dimen>
+    <dimen name="item_group_margin_top_bottom">8dp</dimen>
+    <dimen name="item_group_padding_left_right">15dp</dimen>
+    <dimen name="item_group_padding_top_bottom">15dp</dimen>
+
+    <dimen name="item_group_explain_text_margin_top">8dp</dimen>
+
+    <dimen name="item_group_card_corners_radius">10dp</dimen>
+    <dimen name="item_group_card_elevation">5dp</dimen>
+
+    <dimen name="item_question_margin_left">3dp</dimen>
+
+    <dimen name="item_question_text_number_padding">8dp</dimen>
+
+
 </resources>

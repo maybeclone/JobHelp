@@ -1,19 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".activities.MainActivity">
 
-    <Button
-        android:id="@+id/multipleChoiceQuestionButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/name_button_multiple_choice_question"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/mainToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
 
-</android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/newsButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/name_button_majors"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/news"
+            android:background="?attr/selectableItemBackground"/>
+
+        <ImageView
+            android:id="@+id/majorButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/name_button_majors"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:src="@drawable/explorer_careers"
+            android:scaleType="centerCrop"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/multipleChoiceQuestionButton"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/name_button_multiple_choice_question"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:src="@drawable/multiple_choice"
+        android:scaleType="center"
+        android:background="?attr/selectableItemBackground"/>
+
+</LinearLayout>

@@ -32,7 +32,7 @@ class QuestionAdapter(val callback: QuestionCallback, var questionList: List<Que
 
     override fun onBindViewHolder(holder: QuestionHolder, position: Int) {
         val nowQuestion = questionList!![position]
-        holder.bindData(nowQuestion)
+        holder.bindData(position+1, nowQuestion)
     }
 
     fun swapQuestion(labelGroupQuestion: LabelGroupQuestion, questionList: List<Question>?){
@@ -83,9 +83,10 @@ class QuestionAdapter(val callback: QuestionCallback, var questionList: List<Que
             }
         }
 
-        fun bindData(question: Question) {
+        fun bindData(position: Int, question: Question) {
             this.question = question
             itemView.questionText.text = question.question
+            itemView.numberText.text = position.toString()
             if(question.point == -1){
                 itemView.radioGroupPoint.clearCheck()
             }

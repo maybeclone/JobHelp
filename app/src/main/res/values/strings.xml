@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name" translatable="false">Job Help</string>
+
     <string name="name_button_multiple_choice_question">John Holland Test</string>
+    <string name="name_button_majors">Learn Majors</string>
+
     <string name="title_radio_button_zero_point">0 pt</string>
     <string name="title_radio_button_one_point">1 pt</string>
     <string name="title_radio_button_two_point">2 pt</string>
@@ -12,5 +15,16 @@
     <string name="title_button_next_group_question">Continue</string>
 
     <string name="title_button_continue_show_result">Show result</string>
+
+    <string name="title_toolbar_explain_activity">Your type is...</string>
+    <string name="title_toolbar_job_help">Career Exploration</string>
+    <string name="title_toolbar_news">News</string>
+    <string name="title_toolbar_content">Content</string>
+
+    <string name="title_menu_share">Share</string>
+    <string name="title_menu_reset">Reset</string>
+
+    <string name="toast_message_network_error">There are some errors</string>
+
 
 </resources>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="name_button_multiple_choice_question">Trắc nghiệm John Holland</string>
+    <string name="name_button_majors">Tìm hiểu các nghề nghiệp</string>
 
     <string name="title_radio_button_zero_point">0 đ</string>
     <string name="title_radio_button_one_point">1 đ</string>
@@ -12,4 +13,16 @@
 
     <string name="title_button_next_group_question">Tiếp tục</string>
     <string name="title_button_continue_show_result">Xem kết quả</string>
+
+    <string name="title_toolbar_explain_activity">Bạn là kiểu người...</string>
+    <string name="title_toolbar_job_help">Tìm Hiểu Nghành Nghề</string>
+    <string name="title_toolbar_news">Tin tức</string>
+    <string name="title_toolbar_content">Nội dung</string>
+
+    <string name="title_menu_share">Chia sẻ</string>
+    <string name="title_menu_reset">Làm lại</string>
+
+    <string name="toast_message_network_error">Lỗi kết nối! Vui lòng thử lại</string>
+
+
 </resources>

@@ -22,10 +22,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener{
 
         init()
         multipleChoiceQuestionButton.setOnClickListener(this)
+        majorButton.setOnClickListener(this)
+        newsButton.setOnClickListener(this)
 
     }
 
     private fun init(){
+        setSupportActionBar(mainToolbar)
         databaseAccess = AppDatabase.getInstance(this)
         accessConfigPreference = AccessConfigPreference.getInstance(this)
 
@@ -39,6 +42,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener{
         when(v?.id){
             R.id.multipleChoiceQuestionButton -> {
                 startActivity(Intent(this, MultipleChoiceQuestionActivity::class.java))
+            }
+            R.id.majorButton -> {
+                startActivity(Intent(this, MajorActivity::class.java))
+            }
+            R.id.newsButton -> {
+                startActivity(Intent(this, NewsActivity::class.java))
             }
         }
     }

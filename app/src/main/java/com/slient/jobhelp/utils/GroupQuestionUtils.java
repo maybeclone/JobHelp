@@ -12,9 +12,9 @@ import java.util.Map;
  */
 public class GroupQuestionUtils {
 
-    public static List<LabelGroupQuestion> getMaxPointGroup(Map<LabelGroupQuestion, Integer> mapPoint){
+    public static ArrayList<LabelGroupQuestion> getMaxPointGroup(Map<LabelGroupQuestion, Integer> mapPoint){
         int maxPoint = 0;
-        List<LabelGroupQuestion> arr = new ArrayList<>();
+        ArrayList<LabelGroupQuestion> arr = new ArrayList<>();
         for(LabelGroupQuestion key : LabelGroupQuestion.values()){
             if(mapPoint.get(key) > maxPoint){
                 arr.clear();

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/groupCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="@dimen/item_group_margin_top_bottom"
+    android:layout_marginLeft="@dimen/item_group_margin_left_right"
+    android:layout_marginRight="@dimen/item_group_margin_left_right"
+    android:layout_marginTop="@dimen/item_group_margin_top_bottom"
+    app:cardCornerRadius="@dimen/item_group_card_corners_radius"
+    app:cardElevation="@dimen/item_group_card_elevation"
+    app:cardBackgroundColor="@color/colorArtisticGroup">
+
+    <LinearLayout android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/item_group_padding_left_right"
+        android:paddingRight="@dimen/item_group_padding_left_right"
+        android:paddingTop="@dimen/item_group_padding_top_bottom"
+        android:paddingBottom="@dimen/item_group_padding_top_bottom">
+
+        <TextView
+            android:id="@+id/nameText"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Realistic - Người thực tế"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@android:color/white"/>
+
+        <ImageView
+            android:id="@+id/descriptionImageView"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/item_group_description_image_margin_top"
+            android:layout_width="wrap_content"
+            android:src="@drawable/artistic_group" />
+
+        <TextView
+            android:id="@+id/explainText"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="@dimen/item_group_explain_text_margin_top"
+            android:text="Người thuộc nhóm sở thích nghề nghiệp này thường có khả năng về kỹ thuật, công nghệ, hệ thống; ưa thích làm việc với đồ vật, máy móc, động thực vật; thích làm các công việc ngoài trời.
+
+Ngành nghề phù hợp với nhóm này bao gồm những nghề về kiến trúc, an toàn lao động, nghề mộc, xây dựng, thủy sản, kỹ thuật, máy tàu thủy, lái xe, huấn luyện viên, nông - lâm nghiệp (quản lý trang trại, nhân giống cá, lâm nghiệp...), cơ khí (chế tạo máy, bảo trì và sửa chữa thiết bị, luyện kim, cơ khí ứng dụng, tự động...), điện - điện tử, địa lý - địa chất (đo đạc, vẽ bản đồ địa chính), dầu khí, hải dương học, quản lý công nghiệp..."
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>
+

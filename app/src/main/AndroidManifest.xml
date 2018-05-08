@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.slient.jobhelp">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -17,7 +19,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.MultipleChoiceQuestionActivity" />
-        <activity android:name=".activities.ExplanationActivity"></activity>
+        <activity
+            android:name=".activities.ExplanationActivity"
+            android:parentActivityName=".activities.MainActivity" />
+        <activity android:name=".activities.MajorActivity" />
+        <activity android:name=".activities.DetailMajorActivity" />
+        <activity android:name=".activities.NewsActivity" />
+        <activity android:name=".activities.DetailNewsActivity"></activity>
     </application>
 
 </manifest>

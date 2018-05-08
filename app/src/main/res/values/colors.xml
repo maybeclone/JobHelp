@@ -6,4 +6,10 @@
     <color name="colorStepViewForeground">#FFE04E41</color>
     <color name="colorStepViewBackground">#FFF9E7CF</color>
     <color name="colorBackgroundDivider">#FFE0E0E0</color>
+    <color name="colorArtisticGroup">#FFE98885</color>
+    <color name="colorRealisticGroup">#FF8BA987</color>
+    <color name="colorInvestigativeGroup">#FF5B8FC9</color>
+    <color name="colorConventionalGroup">#FF6AA4AB</color>
+    <color name="colorEnterprisingGroup">#FF556074</color>
+    <color name="colorSocialGroup">#FFF7AB60</color>
 </resources>

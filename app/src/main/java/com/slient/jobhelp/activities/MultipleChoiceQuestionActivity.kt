@@ -1,14 +1,17 @@
 package com.slient.jobhelp.activities
 
 import android.content.Context
+import android.content.Intent
 import android.os.AsyncTask
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.DividerItemDecoration
+import android.util.Log
 import android.view.View
 import com.slient.jobhelp.R
 import com.slient.jobhelp.adapters.QuestionAdapter
 import com.slient.jobhelp.callbacks.QuestionCallback
+import com.slient.jobhelp.configs.ConfigIntent
 import com.slient.jobhelp.models.data.LabelGroupQuestion
 import com.slient.jobhelp.models.database.data.Question
 import com.slient.jobhelp.models.database.dbhelper.AppDatabase
@@ -36,7 +39,7 @@ class MultipleChoiceQuestionActivity : AppCompatActivity(), View.OnClickListener
         dividerItemDecoration.setDrawable(getDrawable(R.drawable.divider_item_question))
         questionsRecyclerView.addItemDecoration(dividerItemDecoration)
         questionsRecyclerView.adapter = adapter
-        LoadingDBDataTask().execute()
+        LoadingQuestionFromDatabaseTask().execute()
     }
 
     private fun setupProgressGroupStepView() {
@@ -60,7 +63,7 @@ class MultipleChoiceQuestionActivity : AppCompatActivity(), View.OnClickListener
                         progressGroupStepView.setCompletedPosition(index)
                         progressGroupStepView.drawView()
                         val label = LabelGroupQuestion.values()[index]
-                        adapter.swapQuestion(label, mapQuestions!![label])
+                        adapter.swapQuestion(label, mapQuestions[label])
                         questionsRecyclerView.scrollToPosition(0)
                         continueButton.isEnabled = false
                         if (index == LabelGroupQuestion.values().size - 1 ) {
@@ -68,7 +71,9 @@ class MultipleChoiceQuestionActivity : AppCompatActivity(), View.OnClickListener
                         }
                     } else {
                         val labels = GroupQuestionUtils.getMaxPointGroup(mapPoints)
-                        s
+                        val resultIntent = Intent(this, ExplanationActivity::class.java)
+                        resultIntent.putExtra(ConfigIntent.EXTRA_LIST_GROUP, labels)
+                        startActivity(resultIntent)
                     }
                 }
             }
@@ -79,7 +84,7 @@ class MultipleChoiceQuestionActivity : AppCompatActivity(), View.OnClickListener
         continueButton.isEnabled = enable
     }
 
-    inner class LoadingDBDataTask: AsyncTask<Context, Void, HashMap<LabelGroupQuestion, List<Question>>>() {
+    inner class LoadingQuestionFromDatabaseTask: AsyncTask<Void, Void, HashMap<LabelGroupQuestion, List<Question>>>() {
 
         override fun onPreExecute() {
             super.onPreExecute()
@@ -87,15 +92,12 @@ class MultipleChoiceQuestionActivity : AppCompatActivity(), View.OnClickListener
             questionsRecyclerView.visibility = View.INVISIBLE
         }
 
-        override fun doInBackground(vararg params: Context?): HashMap<LabelGroupQuestion, List<Question>> {
+        override fun doInBackground(vararg params: Void): HashMap<LabelGroupQuestion, List<Question>> {
             val loadingMap = HashMap<LabelGroupQuestion, List<Question>>()
             if (databaseAccess != null) {
-                loadingMap.put(LabelGroupQuestion.A, databaseAccess!!.questionDAO().getQuestionFollowGroup(LabelGroupQuestion.A.toString()))
-                loadingMap.put(LabelGroupQuestion.B, databaseAccess!!.questionDAO().getQuestionFollowGroup(LabelGroupQuestion.B.toString()))
-                loadingMap.put(LabelGroupQuestion.C, databaseAccess!!.questionDAO().getQuestionFollowGroup(LabelGroupQuestion.C.toString()))
-                loadingMap.put(LabelGroupQuestion.D, databaseAccess!!.questionDAO().getQuestionFollowGroup(LabelGroupQuestion.D.toString()))
-                loadingMap.put(LabelGroupQuestion.E, databaseAccess!!.questionDAO().getQuestionFollowGroup(LabelGroupQuestion.E.toString()))
-                loadingMap.put(LabelGroupQuestion.F, databaseAccess!!.questionDAO().getQuestionFollowGroup(LabelGroupQuestion.F.toString()))
+              LabelGroupQuestion.values().forEach {
+                  loadingMap.put(it, databaseAccess!!.questionDAO().getQuestionFollowGroup(it.toString()))
+              }
             }
             return loadingMap
         }

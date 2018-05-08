@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.MajorActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/majorToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+
+    </android.support.v7.widget.Toolbar>
+
+   <FrameLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+       <ExpandableListView
+           android:id="@+id/expandableListView"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_marginRight="10dp"
+           android:layout_marginLeft="10dp">
+       </ExpandableListView>
+       <ProgressBar
+           android:id="@+id/groupLoadingProgressBar"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:indeterminate="true"
+           style="@style/Widget.AppCompat.ProgressBar"/>
+   </FrameLayout>
+
+</LinearLayout>

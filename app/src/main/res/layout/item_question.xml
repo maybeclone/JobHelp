@@ -3,56 +3,74 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:layout_marginTop="@dimen/item_question_margin_top_bottom"
     android:layout_marginBottom="@dimen/item_question_margin_top_bottom"
     android:layout_marginRight="@dimen/item_question_margin_left_right"
     android:layout_marginLeft="@dimen/item_question_margin_left_right">
 
     <TextView
-        android:id="@+id/questionText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Tôi có tính tự lập"
-        android:textColor="@android:color/black"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+        android:id="@+id/numberText"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="@color/colorBackgroundDivider"
+        android:padding="@dimen/item_question_text_number_padding"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"/>
 
-    <RadioGroup
-        android:id="@+id/radioGroupPoint"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="right"
-        android:layout_marginTop="@dimen/item_question_space_between_component">
-        <RadioButton
-            android:id="@+id/zeroRadioButton"
-            android:layout_width="wrap_content"
+        android:layout_weight="10"
+        android:layout_marginLeft="@dimen/item_question_margin_left"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/questionText"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/title_radio_button_zero_point"/>
-        <RadioButton
-            android:id="@+id/oneRadioButton"
-            android:layout_width="wrap_content"
+            android:text="Tôi có tính tự lập"
+            android:textColor="@android:color/black"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroupPoint"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/item_question_space_between_radio_button"
-            android:text="@string/title_radio_button_one_point"/>
-        <RadioButton
-            android:id="@+id/twoRadioButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/item_question_space_between_radio_button"
-            android:text="@string/title_radio_button_two_point"/>
-        <RadioButton
-            android:id="@+id/threeRadioButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/item_question_space_between_radio_button"
-            android:text="@string/title_radio_button_three_point"/>
-        <RadioButton
-            android:id="@+id/fourRadioButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/item_question_space_between_radio_button"
-            android:text="@string/title_radio_button_four_point"/>
-    </RadioGroup>
+            android:orientation="horizontal"
+            android:gravity="right"
+            android:layout_marginTop="@dimen/item_question_space_between_component">
+            <RadioButton
+                android:id="@+id/zeroRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_radio_button_zero_point"/>
+            <RadioButton
+                android:id="@+id/oneRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/item_question_space_between_radio_button"
+                android:text="@string/title_radio_button_one_point"/>
+            <RadioButton
+                android:id="@+id/twoRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/item_question_space_between_radio_button"
+                android:text="@string/title_radio_button_two_point"/>
+            <RadioButton
+                android:id="@+id/threeRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/item_question_space_between_radio_button"
+                android:text="@string/title_radio_button_three_point"/>
+            <RadioButton
+                android:id="@+id/fourRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/item_question_space_between_radio_button"
+                android:text="@string/title_radio_button_four_point"/>
+        </RadioGroup>
+    </LinearLayout>
 
 </LinearLayout>

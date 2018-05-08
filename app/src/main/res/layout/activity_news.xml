@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".activities.NewsActivity">
 
     <android.support.v7.widget.Toolbar
-        android:id="@+id/toolBar"
+        android:id="@+id/newsToolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
 
     </android.support.v7.widget.Toolbar>
 
@@ -16,22 +19,20 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <ProgressBar
+            android:id="@+id/loadingRSSProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"/>
+
         <android.support.v7.widget.RecyclerView
-            android:id="@+id/groupQuestionRecyclerView"
+            android:id="@+id/newsRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layoutManager="android.support.v7.widget.LinearLayoutManager">
 
         </android.support.v7.widget.RecyclerView>
 
-        <ProgressBar
-            android:id="@+id/loadingFromDBProgressBar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
-            android:layout_gravity="center"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"/>
-
     </FrameLayout>
+
 </LinearLayout>
